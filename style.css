@@ -96,6 +96,7 @@ select {
 * {
   font-size: inherit;
   font-weight: inherit;
+  font-family: var(--ff-primary-100);
 }
 
 body {
@@ -103,13 +104,104 @@ body {
 }
 
 /* main */
-main .main_content {
+.main_content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 32px;
 }
 
-main .hero_logo {
+.hero_logo {
   width: 134.85px;
   height: 56px;
+}
+
+.main_content h1 {
+  font-size: var(--fs-700);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-regular);
+  margin-top: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 16px;
+}
+
+.main_content span {
+  color: var(--clr-primary-100);
+}
+
+.main_content p {
+  font-size: var(--fs-500);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-light);
+  margin-top: 32px;
+  padding: 0 16px;
+  text-align: center;
+  line-height: 1.6;
+  width: min(100%, 500px);
+}
+
+.hero_podcast-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.hero_podcast-container img:nth-child(1) {
+  width: 100px;
+  height: auto;
+}
+
+.hero_podcast-container img:nth-child(2) {
+  width: 100px;
+  height: auto;
+}
+
+.hero_podcast-container img:nth-child(3) {
+  width: 180px;
+  height: auto;
+}
+
+.hero_podcast-container img:nth-child(4) {
+  width: 130px;
+  height: auto;
+}
+
+.hero_access {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px;
+}
+
+#email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: min(100%, 326px);
+  height: 46px;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-200);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-semi-bold);
+  border-radius: 28px;
+  border: none;
+}
+
+.hero_access a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: min(100%, 326px);
+  height: 46px;
+  background-color: var(--clr-primary-100);
+  color: var(--clr-neutral-200);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-semi-bold);
+  border-radius: 28px;
+  margin: 16px;
 }
