@@ -63,6 +63,7 @@ body {
 }
 /* A elements that don't have a class get default styles */
 a:not([class]) {
+  -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
 }
 /* Make images easier to work with */
@@ -86,7 +87,9 @@ select {
   *,
   *::before,
   *::after {
+    -webkit-animation-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
@@ -104,7 +107,29 @@ body {
 }
 
 /* main */
+main {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+}
+
+main picture {
+  grid-row: 1/1;
+  grid-column: 1/1;
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+  opacity: 10%;
+}
+
+main picture img {
+  height: 100vh;
+  width: 100vw;
+}
+
 .main_content {
+  grid-row: 1/1;
+  grid-column: 1/1;
   display: flex;
   flex-direction: column;
   align-items: center;
