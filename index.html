@@ -1,52 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pod Request Access</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pod Request Access</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <main>
+      <div class="main_content">
+        <a href="#">
+          <img
+            class="hero_logo"
+            src="images/desktop/logo.svg"
+            alt="Pod Request Access logo."
+          />
+        </a>
 
-<body>
-  <main>
+        <h1>
+          <span>Publish your podcasts</span> <br />
+          everywhere.
+        </h1>
 
-    <div class="main_content">
-      <a href="#">
-        <img class="hero_logo" src="images/desktop/logo.svg" alt="Pod Request Access logo.">
-      </a>
+        <p>
+          Upload your audio to Pod with a single click. We'll then distribute
+          your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts
+          and more!
+        </p>
 
-      <h1><span>Publish your podcasts</span> <br> everywhere.</h1>
+        <div class="hero_podcast-container">
+          <div class="hero-container-1">
+            <img src="images/desktop/spotify.svg" alt="" />
+            <img src="images/desktop/apple-podcast.svg" alt="" />
+          </div>
 
-      <p>
-        Upload your audio to Pod with a single click. We'll then distribute your podcast to Spotify,
-        Apple Podcasts, Google Podcasts, Pocket Casts and more!
-      </p>
+          <div class="hero-container-2">
+            <img src="images/desktop/google-podcasts.svg" alt="" />
+            <img src="images/desktop/pocket-casts.svg" alt="" />
+          </div>
+        </div>
 
-      <div class="hero_podcast-container">
+        <div class="hero_access">
+          <input
+            type="email"
+            id="email"
+            pattern=".+@globex\.com"
+            size="30"
+            required
+          />
 
-        <img src="images/desktop/spotify.svg" alt="">
-        <img src="images/desktop/apple-podcast.svg" alt="">
-
-        <img src="images/desktop/google-podcasts.svg" alt="">
-        <img src="images/desktop/pocket-casts.svg" alt="">
+          <a class="hero_CTA" href="#">Request access</a>
+        </div>
       </div>
+    </main>
 
-      <div class="hero_access">
-        <input type="email" id="email" pattern=".+@globex\.com" size="30" required>
-
-        <a class="hero_CTA" href="#">Request access</a>
-      </div>
-    </div>
-
-    <picture>
-      <img src="images/mobile/image-host.jpg" alt="">
-    </picture>
-  </main>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
