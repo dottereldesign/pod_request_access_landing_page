@@ -185,6 +185,7 @@ main::before {
 .hero-container-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 32px;
   column-gap: 32px;
   align-items: center;
 }
