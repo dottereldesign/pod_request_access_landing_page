@@ -342,6 +342,10 @@ main::before {
   cursor: pointer;
 }
 
+.hero_CTA:hover {
+  background-color: #b3ffe2;
+}
+
 #email:focus {
   /* Change properties as you like */
   border: none;
@@ -350,6 +354,63 @@ main::before {
 }
 
 @media (min-width: 768px) {
+  .hero_access {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 48px;
+    position: relative;
+    width: 427px;
+  }
+
+  #email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 56px;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-200);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-light);
+    border-radius: 28px;
+    border: none;
+    color: white;
+    padding: 4px 16px;
+  }
+
+  .hero_access form {
+    width: 100%;
+  }
+
+  .hero_CTA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 162px;
+    height: 46px;
+    background-color: var(--clr-primary-100);
+    color: var(--clr-neutral-200);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-semi-bold);
+    border-radius: 28px;
+    margin-top: 0;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Position 50% from the top of the container */
+    right: 0; /* Keep your existing alignment to the right */
+    transform: translateY(-50%); /* Center vertically */
+  }
+
+  #email:focus {
+    /* Change properties as you like */
+    border: none;
+    outline: none; /* Removes the default focus outline */
+    color: white;
+  }
 }
 
 @media (min-width: 1440px) {
