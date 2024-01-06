@@ -103,6 +103,8 @@ select {
 
 body {
   background-color: var(--clr-neutral-200);
+  width: min(100%, 1440px);
+  margin: 0 auto;
 }
 
 header {
@@ -110,6 +112,7 @@ header {
   justify-content: center;
   padding-top: 16px;
 }
+
 .hero_logo {
   width: 135px;
   height: 56px;
@@ -120,18 +123,21 @@ main {
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: 1;
+  position: relative;
 }
 
-body::before {
+main::before {
   content: "";
   position: absolute;
   background-image: url("images/mobile/image-host.jpg");
   z-index: -1;
+  top: -72px;
+  right: 0;
   background-position: right 0; /* Adjust the position */
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100%;
-  height: 100%;
+  width: 491px;
+  height: 767px;
   opacity: 20%;
 }
 
@@ -210,10 +216,46 @@ body::before {
   }
 
   body::before {
+    content: "";
+    position: none;
+    background-image: none;
+    z-index: 2;
+    background-position: right 0; /* Adjust the position */
+    background-repeat: no-repeat;
+    background-size: auto;
+    bottom: -40px;
     right: 0;
-    width: 491px;
+    width: 232px;
+    height: 104px;
+  }
+
+  main::after {
+    content: "";
+    position: absolute;
+    background-image: url("images/desktop/bg-pattern-dots.svg");
+    z-index: 3;
+    background-position: right 0; /* Adjust the position */
+    background-repeat: no-repeat;
+    background-size: auto;
+    bottom: -40px;
+    right: 0;
+    width: 232px;
+    height: 104px;
+  }
+
+  main::before {
+    content: "";
+    position: absolute;
     background-image: url("images/tablet/image-host.jpg");
-    opacity: 70%;
+    z-index: -1;
+    top: -72px;
+    right: 0;
+    background-position: right 0; /* Adjust the position */
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 491px;
+    height: 767px;
+    opacity: 60%;
   }
 
   .main_content {
@@ -221,11 +263,41 @@ body::before {
     width: 636px;
     margin-top: 150px;
     bottom: 0;
+    padding-bottom: 48px;
   }
 
   .hero_podcast-container {
     flex-direction: row;
     order: 4;
+  }
+
+  .main_content p {
+    text-align: start;
+  }
+}
+
+@media (min-width: 1200px) {
+  body::before {
+    right: 0;
+    top: 100px;
+    width: 888px;
+    background-image: url("images/desktop/image-host.jpg");
+    opacity: 70%;
+  }
+
+  main::before {
+    content: "";
+    position: absolute;
+    background-image: url("images/desktop/image-host.jpg");
+    z-index: -1;
+    top: 50px;
+    right: 0;
+    background-position: right 0; /* Adjust the position */
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 888px;
+    height: 640px;
+    opacity: 60%;
   }
 }
 
