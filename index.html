@@ -50,15 +50,18 @@
         </div>
 
         <div class="hero_access">
-          <input
-            type="email"
-            id="email"
-            pattern=".+@globex\.com"
-            size="30"
-            required
-          />
-
-          <a class="hero_CTA" href="#">Request access</a>
+          <form action="/submit-email" method="post">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              pattern=".+@globex\.com"
+              size="30"
+              required
+              placeholder="Email Address"
+            />
+            <button type="submit" class="hero_CTA">Request Access</button>
+          </form>
         </div>
       </div>
     </main>
