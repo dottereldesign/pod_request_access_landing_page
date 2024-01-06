@@ -347,9 +347,8 @@ main::before {
 }
 
 #email:focus {
-  /* Change properties as you like */
   border: none;
-  outline: none; /* Removes the default focus outline */
+  outline: none;
   color: white;
 }
 
@@ -400,18 +399,47 @@ main::before {
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 50%; /* Position 50% from the top of the container */
-    right: 0; /* Keep your existing alignment to the right */
-    transform: translateY(-50%); /* Center vertically */
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
   }
 
   #email:focus {
-    /* Change properties as you like */
     border: none;
-    outline: none; /* Removes the default focus outline */
+    outline: none;
     color: white;
   }
 }
 
-@media (min-width: 1440px) {
+#errorMesage {
+  display: none;
+  color: red;
+  font-size: 4px;
+  margin-top: 8px;
+}
+
+.hero_access span {
+  font-size: 14px;
+  font-weight: var(--fw-light);
+  margin-top: 4px;
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  #errorMesage {
+    display: none;
+    color: red;
+    font-size: 4px;
+    margin-top: 8px;
+  }
+
+  .hero_access span {
+    font-size: 14px;
+    font-weight: var(--fw-light);
+    margin-top: 4px;
+    text-align: right;
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+  }
 }

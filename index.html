@@ -60,16 +60,20 @@
         </div>
 
         <div class="hero_access">
-          <form action="/submit-email" method="post">
+          <form action="/submit-email" method="post" id="emailForm" novalidate>
             <input
               type="email"
               id="email"
               name="email"
-              pattern=".+@globex\.com"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               size="30"
               required
               placeholder="Email Address"
             />
+
+            <span id="errorMessage" style="display: none; color: red"
+              >Oops! Please check your email.</span
+            >
             <button type="submit" class="hero_CTA">Request Access</button>
           </form>
         </div>
